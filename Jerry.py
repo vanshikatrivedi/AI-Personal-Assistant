@@ -2,6 +2,7 @@ import pyttsx3
 import speech_recognition as sr
 import pyaudio
 import datetime
+import os
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -49,6 +50,14 @@ def wish():
     speak("Please tell me how can I help you?")
 
 
-
 if __name__ == "__main__":
     wish()
+    while True:
+
+        query = takecommand().lower()
+
+        #logic_building for tasks
+
+        if "open notepad" in query:
+            npath = "C:\\WINDOWS\\system32\\notepad.exe"
+            os.startfile(npath)
