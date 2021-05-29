@@ -7,6 +7,7 @@ import os
 import cv2
 from requests import get
 import wikipedia
+import webbrowser
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -106,3 +107,13 @@ if __name__ == "__main__":
             # print(results)
 
         elif "open youtube" in query:
+            webbrowser.open("www.youtube.com")
+
+        elif "open facebook" in query:
+            webbrowser.open("www.facebook.com")
+
+        elif "open instagram" in query:
+            webbrowser.open("www.instagram.com")
+
+        elif "open stackoverflow" in query:
+            webbrowser.open("www.stackoverflow.com")
