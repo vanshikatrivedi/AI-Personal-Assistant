@@ -8,6 +8,7 @@ import cv2
 from requests import get
 import wikipedia
 import webbrowser
+import pywhatkit as kit
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -117,3 +118,16 @@ if __name__ == "__main__":
 
         elif "open stackoverflow" in query:
             webbrowser.open("www.stackoverflow.com")
+
+        elif "open google" in query:
+            speak("What should I search on Google")
+            cm = takecommand().lower()
+            webbrowser.open(f"{cm}")
+
+        elif "send a message" in query:
+            kit.sendwhatmsg("+918797471121", "this is testing protocol",00,9)
+
+        elif "play a song on youtube" in query:
+            kit.playonyt("perfect")
+
+        elif "email"
